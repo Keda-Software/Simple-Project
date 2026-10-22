@@ -1,62 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Receipt</title>
-    <link rel="stylesheet" href="Shopping_receipt.css">
-</head>
-<body>      
-<div class="container">
-    <h1>Shopping Receipt</h1>
- <div class="input-container">
-    <Form>
-      <table>
-        <tr id="CustomerName">
-          <td><label for="CustomerName">Customer Name:</label></label></td>
-            <td><input type="text" id="CustomerName" name="CustomerName" required></td>
-            </tr> 
-        
-          <tr id="ProductName">
-            <td><label for="ProductName">Product Name:</label></td>
-            <td><input type="text" id="ProductName" name="ProductName" required></td>
-          </tr>
-         <tr id="Price">
-            <td> <label for="Price">Price:</label></td>
-            <td><input type="number" id="Price" name="Price" min="0" step="0.01" required></td>
-         </tr> 
-            <tr id="Quantity">
-                <td><label for="Quantity">Quantity:</label></td>
-                <td><input type="number" id="Quantity" name="Quantity" min="1" required></td>
-            </tr>   
-            <button id="add-item-btn">Add Item</button>
-    </Form>
- </div>
+    <link rel="stylesheet" href="Shopping_receipt.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Shopping Receipt</h1>
 
-
-
- <table id="receipt-table" border="1">
-     <thead>
-         <tr>
-             <th>Customer Name</th>
-                <th>Product Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-            </tr>
+      <div class="input-container">
+        <form id="shopping-form">
+          <table>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
+              <td><label for="customerName">Customer Name:</label></td>
+              <td><input type="text" id="customerName" required /></td>
             </tr>
+
+            <tr>
+              <td><label for="productName">Product Name:</label></td>
+              <td><input type="text" id="productName" required /></td>
+            </tr>
+
+            <tr>
+              <td><label for="price">Price:</label></td>
+              <td>
+                <input type="number" id="price" min="0" step="0.01" required />
+              </td>
+            </tr>
+
+            <tr>
+              <td><label for="quantity">Quantity:</label></td>
+              <td>
+                <input type="number" id="quantity" min="1" step="1" required />
+              </td>
+            </tr>
+          </table>
+
+          <button type="submit" id="add-item-btn">Add Item</button>
+        </form>
+      </div>
+
+      <h2>Receipt Details</h2>
+
+      <table id="receipt-table" border="1">
+        <thead>
+          <tr>
+            <th>Customer Name</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
         </thead>
+
         <tbody id="receipt-items">
-            <!-- Items will be dynamically added here -->
+          <!-- JavaScript adds items here -->
         </tbody>
+
+        <tfoot>
+          <tr>
+            <th colspan="4">Grand Total</th>
+            <th id="grand-total">0.00</th>
+          </tr>
+        </tfoot>
+      </table>
+
+      <p>Thank you for your purchase!</p>
     </div>
-    <p>Thank you for your purchase! Below is a summary of your shopping receipt.</p>
-</body>
+    <script src="./Shopping_receipt.js"></script>
+  </body>
 </html>
