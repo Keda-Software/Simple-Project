@@ -1,77 +1,147 @@
-body{
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
     margin: 0;
-    background-color: #666;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    padding: 30px;
+    color: #333;
 }
-.receipt{
-    width: 400px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
-.receipt h1{
+
+h1, h2 {
     text-align: center;
-    margin-bottom: 20px;
+    color: #1e3a5f;
 }
-.receipt table{
+
+.input-container {
+    margin-bottom: 30px;
+}
+
+form table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 15px;
 }
-.receipt th, .receipt td{
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-.container{
-    background-color: #f9f9f9;
-    padding: 16px;
-    border-radius: 10px;
-}
-.container h1{
-    text-align: center;
-    margin-bottom: 20px;
-    background-color: #102b11;
-    color: white;
-    border-radius: 20%;
 
-}
-.input-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    background: linear-gradient(to right, #0a660d, #66b96a);
-    border-radius: 10px;
+form td {
     padding: 10px;
 }
-input[type="text"]{
+
+form label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-    margin-right: 10px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 15px;
 }
-input[type="submit"]{
-    padding: 10px 20px;
-    background-color: #102b11;
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
+}
+
+/* Add Item button */
+#add-item-btn {
+    background: #2563eb;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 15px;
     cursor: pointer;
 }
-input[type="submit"]:hover{
-    background-color: #0d1f0e;
+
+#add-item-btn:hover {
+    background: #1d4ed8;
 }
-input[type="number"]
-{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100px;
-    margin-right: 10px;
+
+/* Receipt table */
+#receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border: none;
+}
+
+/* Table header */
+#receipt-table thead {
+    background: #1e3a5f;
+    color: white;
+}
+
+#receipt-table th {
+    padding: 14px 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Table cells */
+#receipt-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+/* Alternating row colors */
+#receipt-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+/* Hover effect */
+#receipt-table tbody tr:hover {
+    background: #eaf2ff;
+}
+
+/* Grand total row */
+#receipt-table tfoot {
+    background: #dbeafe;
+    color: #1e3a5f;
+    font-weight: bold;
+}
+
+#receipt-table tfoot th {
+    padding: 15px 12px;
+    font-size: 16px;
+}
+
+/* Thank you message */
+.container > p {
+    text-align: center;
+    color: #64748b;
+    margin-top: 25px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 12px;
+        overflow-x: auto;
+    }
+
+    #receipt-table {
+        min-width: 550px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
 }
