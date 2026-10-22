@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    background-color: #666;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.receipt{
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.receipt h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.receipt table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.receipt th, .receipt td{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.container{
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 10px;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #102b11;
+    color: white;
+    border-radius: 20%;
+
+}
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #0a660d, #66b96a);
+    border-radius: 10px;
+    padding: 10px;
+}
+input[type="text"]{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+input[type="submit"]{
+    padding: 10px 20px;
+    background-color: #102b11;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: #0d1f0e;
+}
+input[type="number"]
+{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px;
+    margin-right: 10px;
+}
