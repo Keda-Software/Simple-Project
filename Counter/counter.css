@@ -1,0 +1,38 @@
+    h1{
+        background-color: cadetblue;
+        border-radius: 15px;
+        padding-left: 5%;
+        padding-block: 10px;
+    }
+
+    #countlabel{
+            display:block;
+            text-align: center;
+            font-size: 10cm;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(187, 187, 31);
+            color:rgb(230, 16, 16);
+            padding:5px;
+            /*margin-left:22%; */
+            padding-block: 0px;
+        }
+    #countlabel:hover{
+      background-color: rgb(126, 123, 85);
+      color:#1bc499;
+    }
+        #buttons{
+            text-align: center;
+        }
+        .buttons{
+           padding: 10px 20px;
+           font-size: 1.5em;
+           background-color: rgb(103, 211, 211); 
+           border-radius:5px;
+           cursor:pointer;
+           transion:background-color 0.025s;
+        }
+        .buttons:hover{
+            background-color: #1bc499;
+        }
+
+        
