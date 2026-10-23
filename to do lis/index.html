@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Minimalist To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <header class="app-header">
+      <h1>TaskFlow</h1>
+      <p class="subtitle">Stay organized and get things done</p>
+    </header>
+
+    <!-- Task Input Section -->
+    <form id="todo-form" class="input-section">
+      <input
+        type="text"
+        id="todo-input"
+        placeholder="Add a new task..."
+        aria-label="New task input"
+        required
+      >
+      <button type="submit" id="add-btn" aria-label="Add task">
+        <span class="plus-icon">+</span> Add
+      </button>
+    </form>
+
+    <!-- Task Stats & Filters Dashboard -->
+    <div class="dashboard">
+      <div class="stats-row">
+        <span class="stat-pill">Total: <strong id="total-count">0</strong></span>
+        <span class="stat-pill completed">Completed: <strong id="completed-count">0</strong></span>
+        <span class="stat-pill pending">Remaining: <strong id="remaining-count">0</strong></span>
+      </div>
+
+      <div class="controls-row">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <button id="clear-completed-btn" class="clear-btn">Clear Completed</button>
+      </div>
+    </div>
+
+    <!-- Task List -->
+    <ul id="task-list" class="task-list" aria-label="To-do items">
+      <!-- Dynamic tasks will be injected here by JavaScript -->
+    </ul>
+
+    <!-- Empty State Message -->
+    <div id="empty-state" class="empty-state">
+      <p>No tasks found. Add a task to get started!</p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
