@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckBox</title>
+</head>
+<div>
+<style>
+*{
+  margin: 0;
+}
+  body{
+   font-family: verdana;
+   font-size: 2em;
+   color: #f10c0c;
+   font-family: cambria;
+   background-color: #4d800b3f;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+  }
+  #mysubmit{
+    font-size: 1em;
+  }
+  #subResult{
+ color: rgb(214, 16, 204);
+ background-color: #141111;
+ border-radius: 7px;
+ padding-left: 18px;
+  }
+  #paymentResult{
+    background-color:rgb(31, 156, 156);
+    border-radius: 7px;
+    padding-left: 18px;
+    color: black;
+  }
+  #mySubmit{
+        background-color:rgb(31, 156, 156);
+        border-radius: 7px;
+  }
+  h1{
+    padding: 0px;
+    background-color: #181010c0;
+  }
+
+</style>
+<div class="Container">
+<h1>Checkbox and Radio Project</h1>
+<input type="checkbox" id="myCheckbox">
+<label for="myCheckbox">Subscribe</label><br>
+<input type="radio" id="visaBtn" name="card">
+<label for="visaBtn">Visa</label><br>
+<input type="radio" id="masterCardBtn" name="card">
+<label for="masterCard">MasterCard</label><br>
+<input type="radio" id="payPalBtn" name="card">
+<label for="payPalBtn">PayPal</label><br>
+
+<button type="submit" id="mySubmit">Submit</button>
+<p id="subResult"> </p>
+<p id="paymentResult"> </p>
+
+</div>
+<script src="checkbox.js"></script>
+</body>
+</html>
