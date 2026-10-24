@@ -31,27 +31,25 @@
   #mysubmit{
     font-size: 1em;
   }
-  #subResult{
- color: rgb(214, 16, 204);
- background-color: #141111;
- border-radius: 7px;
- padding-left: 18px;
-  }
-  #paymentResult{
-    background-color:rgb(31, 156, 156);
-    border-radius: 7px;
-    padding-left: 18px;
-    color: black;
-  }
   #mySubmit{
         background-color:rgb(31, 156, 156);
         border-radius: 7px;
+        padding:5px;
+        font-size: 18px;
+        margin:6px;
   }
   h1{
-    padding: 10px;
+    padding: 5px;
     background-color: #181010c0;
     border-radius: 10px;
     font-size: 35x;
+  }
+  .result{
+    background-color: #444;
+    color:white;
+    padding:10px;
+    border-radius: 20px;
+    text-align:center;
   }
 
 </style>
@@ -67,9 +65,10 @@
 <label for="payPalBtn">PayPal</label><br>
 
 <button type="submit" id="mySubmit">Submit</button>
+<div class="result">
 <p id="subResult"> </p>
 <p id="paymentResult"> </p>
-
+</div>
 </div>
 <script src="checkbox.js"></script>
 </body>
